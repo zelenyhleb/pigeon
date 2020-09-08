@@ -1,0 +1,23 @@
+{
+  "name": "pigeon",
+  "version": "0.1.0",
+  "description": "A simple REST client for your API debugging",
+  "main": "src/js/main.js",
+  "scripts": {
+    "test": "test",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zelenyhleb/pigeon.git"
+  },
+  "author": "Nikifor Fedorov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zelenyhleb/pigeon/issues"
+  },
+  "homepage": "https://github.com/zelenyhleb/pigeon#readme",
+  "devDependencies": {
+    "electron": "^10.1.1"
+  }
+}
