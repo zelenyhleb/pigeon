@@ -8,7 +8,7 @@ function create () {
         nodeIntegration: true
       }
     })
-    win.loadFile('index.html')
+    win.loadFile('src/html/index.html')
   }
   
   app.whenReady().then(create)
