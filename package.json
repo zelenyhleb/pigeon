@@ -2,10 +2,11 @@
   "name": "pigeon",
   "version": "0.1.0",
   "description": "A simple REST client for your API debugging",
-  "main": "src/js/main.js",
+  "main": "build/App.js",
   "scripts": {
     "test": "test",
-    "start": "electron ."
+    "start": "npm run compile && electron .",
+    "compile": "tsc && copyfiles src/html build && copyfiles src/css build && copyfiles src/images build"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,9 @@
   },
   "homepage": "https://github.com/zelenyhleb/pigeon#readme",
   "devDependencies": {
-    "electron": "^10.1.1"
+    "copyfiles": "^2.3.0",
+    "electron": "^10.1.1",
+    "typescript": "^4.0.2"
   },
   "dependencies": {}
 }
