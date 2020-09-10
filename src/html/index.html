@@ -11,12 +11,24 @@
     <h1>It's the pigeon</h1>
     This guy helps you in testing your REST-API
     <p>
-        We are using node
-        <script>document.write(process.versions.node)</script>,
-        Chrome
-        <script>document.write(process.versions.chrome)</script>,
-        and Electron
-        <script>document.write(process.versions.electron)</script>.
+        <label for="address">Your server's URL:</label><br>
+        <input type="url" id="address" name="address"><br>
+        <button type="button" class="simple_button" onclick="add()">Add parameter</button>
+        <button type="button" class="simple_button" onclick="remove()">Remove parameter</button>
+    <p>
+    <div id="params"></div>
+    <p>
+        <button type="button">Send</button>
+        <code>
+            <br>Result:<br>
+            <div class="result">
+                <p>
+                    some json will be here
+                </p>
+            </div>
+        </code>
+    </p>
+    <script src="../js/params.js"></script>
 </body>
 
 </html>
