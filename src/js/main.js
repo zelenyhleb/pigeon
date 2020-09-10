@@ -9,7 +9,7 @@ function create() {
     }
   })
   win.loadFile('src/html/index.html')
-  // win.removeMenu()
+  win.removeMenu()
 }
 
 app.whenReady().then(create)
