@@ -3,9 +3,9 @@ const children = [];
 const target = document.getElementById("params");
 
 function add() {
-    let element = element();
-    target.appendChild(element);
-    children.push(element);
+    const container = element();
+    target.appendChild(container);
+    children.push(container);
 }
 
 function remove() {
@@ -17,14 +17,16 @@ function remove() {
 
 function element() {
     let container = document.createElement("div");
-    container.appendChild(input());
-    container.appendChild(input());
+    container.setAttribute("class", "param_descriptor");
+    container.appendChild(input("key"));
+    container.appendChild(input("value"));
     return container;
 }
 
-function input() {
+function input(type) {
     let name = document.createElement('input');
     name.setAttribute("placeholder", "Parameter key");
-    name.setAttribute("class", "param_input");
+    name.setAttribute("class", "param_input")
+    name.setAttribute("id", type);
     return name;
 }

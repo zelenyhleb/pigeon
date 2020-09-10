@@ -1,7 +1,8 @@
-const https = require('https');
+const https = require('http');
+const result = document.getElementById("result");
 
 function query(url, params) {
-    https.get(url + params(params), (resp) => {
+    https.get(url + encode(params), (resp) => {
         let data = '';
 
         resp.on('data', (chunk) => {
@@ -9,7 +10,7 @@ function query(url, params) {
         });
 
         resp.on('end', () => {
-            console.log(JSON.parse(data).explanation);
+            result.textContent = data;
         });
 
     }).on("error", (err) => {
@@ -17,12 +18,10 @@ function query(url, params) {
     });
 }
 
-function params(params) {
+function encode(params) {
     let encoded = "?"
     for (const [key, value] of params) {
         encoded += key + "=" + value + "&";
     }
-    return encoded.substring(0, encoded.length - 2);
+    return encoded.substring(0, encoded.length - 1);
 }
-
-export { query }

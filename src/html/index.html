@@ -11,7 +11,7 @@
 This guy helps you in testing your REST-API
 <p>
     <label for="address">Your server's URL:</label><br>
-    <input type="url" id="address" name="address"><br>
+    <input type="url" id="address" name="address" value="http://localhost:7302"><br>
     <button type="button" class="simple_button" onclick="add()">Add parameter</button>
     <button type="button" class="simple_button" onclick="remove()">Remove parameter</button>
 </p>
@@ -19,17 +19,16 @@ This guy helps you in testing your REST-API
 <div id="params"></div>
 </p>
 <p>
-<button type="button">Send</button>
+<button type="button" onclick="send()">Send</button>
 <code>
     <br>Result:<br>
-    <div class="result">
-        <p>
-            some json will be here
-        </p>
+    <div class="result" id="result">
     </div>
 </code>
 </p>
+<script src="../js/request.js"></script>
 <script src="../js/fields.js"></script>
+<script src="../js/input.js"></script>
 </body>
 
 </html>
