@@ -1,16 +1,17 @@
 // initializing empty param-divs array
-const childs = [];
+const children = [];
 const target = document.getElementById("params");
 
 function add() {
-    target.appendChild(container());
-    childs.push(container);
+    let element = element();
+    target.appendChild(element);
+    children.push(element);
 }
 
 function remove() {
-    if (childs.length > 0) {
-        target.removeChild(childs[childs.length - 1])
-        childs.pop();
+    if (children.length > 0) {
+        target.removeChild(children[children.length - 1])
+        children.pop();
     }
 }
 
